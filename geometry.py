@@ -30,6 +30,5 @@ A = below_spine(_photo["spine_screw"][0], A_TOP_FROM_SPINE, SCREW_D)
 B = below_spine(_photo["butt_screw"][0], B_TOP_FROM_SPINE, SCREW_D)
 C = (B[0] + BC_EDGE_GAP + SCREW_D, B[1])
 
-# Pins: x from the liner photo (ref/liner_mm.json), y from calipers
-_pin_x = [p[0] for p in json.load(open("ref/liner_mm.json"))["pins"]]
-PINS = [(x, SPINE_FLAT_Y - PIN_TOP_FROM_SPINE - PIN_HOLE_D / 2) for x in _pin_x]
+# Pins A, B, C (blade side first): x fitted to calipers (params), y from spine
+PINS = [(x, SPINE_FLAT_Y - PIN_TOP_FROM_SPINE - PIN_HOLE_D / 2) for x in PIN_X]

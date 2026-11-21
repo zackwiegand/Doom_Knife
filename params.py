@@ -38,5 +38,10 @@ COLOR_RGBA = (110 / 255, 255 / 255, 20 / 255, 0.31)
 # --- Inside face: blind pin holes (3 identical, in the liner pocket floor) ---
 PIN_HOLE_D = 2.80            # measured on scale (pin is 2.90: snug/press fit)
 PIN_TOP_FROM_SPINE = 3.22    # hole top edge -> straight spine
+# Pins A, B, C from blade side: x of hole centers (mm from pivot).
+# Least-squares fit to all caliper checks (nearest edges, 2.80 holes):
+#   pin A-B 12.88, pin B-C 26.14, pin A-C 42.06, pivot-pin B 10.82,
+#   pin C-screw A 29.04/29.19, pin A-liner corner 1.45  -> worst miss 0.34
+PIN_X = (-7.30, 8.56, 37.68)
 # Pin 7.90 long, center collar 3.85 -> 2.025 per side through liner (1.20)
 PIN_HOLE_DEPTH = (7.90 - 3.85) / 2 - LINER_T + 0.10  # +0.10 so pins don't bottom out

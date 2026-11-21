@@ -99,7 +99,7 @@ def check(part):
     assert part.is_valid and len(part.solids()) == 1 and part.volume > 1000 and inside, "broken solid"
     bad = [e for e in part.edges() if e.geom_type == GeomType.OFFSET]
     assert not bad, f"{len(bad)} offset edges: STEP export would drop faces"
-    for name, (x, y) in zip(["pivot", "A", "B", "C", "pin1", "pin2", "pin3"], [PIVOT, A, B, C, *PINS]):
+    for name, (x, y) in zip(["pivot", "A", "B", "C", "pin A", "pin B", "pin C"], [PIVOT, A, B, C, *PINS]):
         print(f"  {name:5s} x={x:7.2f} y={y:6.2f}")
 
 
